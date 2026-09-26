@@ -17,6 +17,7 @@ CREATE TABLE bronze.airlines(
 	IATA_CODE NVARCHAR(5),
 	AIRLINE NVARCHAR(100)
 );
+GO
 
 IF OBJECT_ID('bronze.airports', 'U') IS NOT NULL
     DROP TABLE bronze.airports;
@@ -31,6 +32,7 @@ CREATE TABLE bronze.airports(
 	LATITUDE FLOAT,
 	LONGITUDE FLOAT
 );
+GO
 
 IF OBJECT_ID('bronze.flights', 'U') IS NOT NULL
     DROP TABLE bronze.flights;
@@ -69,3 +71,4 @@ CREATE TABLE bronze.flights(
 	LATE_AIRCRAFT_DELAY INT,	
 	WEATHER_DELAY INT,
 );
+GO

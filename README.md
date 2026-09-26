@@ -1,5 +1,5 @@
 # 2015-flight-delays-and-cancellations-warehouse
-a modern warehouse built with SQL Server with ETL, data modeling and analytics
+*a modern warehouse built with SQL Server with ETL, data modeling and analytics*
 
 This project contains a comprehensive data warehousing solution with elements of analytics. 
 
@@ -64,3 +64,6 @@ Develop SQL-based analytics.
 ├── .gitignore                          # Files and directories to be ignored by Git
 └── requirements.txt                    # Dependencies and requirements for the project
 ```
+
+# 🛡️ License
+This project is licensed under the MIT License. You are free to use, modify, and share this project with proper attribution.

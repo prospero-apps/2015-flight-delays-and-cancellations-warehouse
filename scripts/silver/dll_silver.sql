@@ -14,8 +14,8 @@ IF OBJECT_ID('silver.airlines', 'U') IS NOT NULL
 GO
 
 CREATE TABLE silver.airlines(
-	IATA_CODE NVARCHAR(5),
-	AIRLINE NVARCHAR(100),
+	iata_code NVARCHAR(5),
+	airline NVARCHAR(100),
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO
@@ -25,13 +25,13 @@ IF OBJECT_ID('silver.airports', 'U') IS NOT NULL
 GO
   
 CREATE TABLE silver.airports(
-	IATA_CODE NVARCHAR(5),
-	AIRPORT NVARCHAR(100),
-	CITY NVARCHAR(50),
-	STATE NVARCHAR(5),
-	COUNTRY NVARCHAR(50),
-	LATITUDE FLOAT,
-	LONGITUDE FLOAT,
+	iata_code NVARCHAR(5),
+	airport NVARCHAR(100),
+	city NVARCHAR(50),
+	state NVARCHAR(5),
+	country NVARCHAR(50),
+	latitude FLOAT,
+	longitude FLOAT,
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO
@@ -41,37 +41,35 @@ IF OBJECT_ID('silver.flights', 'U') IS NOT NULL
 GO
   
 CREATE TABLE silver.flights(
-	YEAR INT,
-	MONTH INT,	
-	DAY INT,	
-	DAY_OF_WEEK INT,	
-	AIRLINE	NVARCHAR(5),
-	FLIGHT_NUMBER INT,
-	TAIL_NUMBER	NVARCHAR(20),
-	ORIGIN_AIRPORT NVARCHAR(5),	
-	DESTINATION_AIRPORT NVARCHAR(5),	
-	SCHEDULED_DEPARTURE	INT,
-	DEPARTURE_TIME INT, 
-	DEPARTURE_DELAY	INT,
-	TAXI_OUT INT,
-	WHEELS_OFF INT,
-	SCHEDULED_TIME INT,	
-	ELAPSED_TIME INT,	
-	AIR_TIME INT,	
-	DISTANCE INT,	
-	WHEELS_ON INT,	
-	TAXI_IN	 INT,
-	SCHEDULED_ARRIVAL INT,
-	ARRIVAL_TIME INT,	
-	ARRIVAL_DELAY INT,	
-	DIVERTED INT,	
-	CANCELLED INT,	
-	CANCELLATION_REASON	CHAR(1),
-	AIR_SYSTEM_DELAY INT,	
-	SECURITY_DELAY INT,	
-	AIRLINE_DELAY INT,	
-	LATE_AIRCRAFT_DELAY INT,	
-	WEATHER_DELAY INT,
+	flight_date DATE,	
+	day_of_week VARCHAR(3),	
+	airline	NVARCHAR(5),
+	flight_number INT,
+	tail_number	NVARCHAR(20),
+	origin_airport NVARCHAR(5),	
+	destination_airport NVARCHAR(5),	
+	scheduled_departure	INT,
+	departure_time INT, 
+	departure_delay	INT,
+	taxi_out INT,
+	wheels_off INT,
+	scheduled_time INT,	
+	elapsed_time INT,	
+	air_time INT,	
+	distance INT,	
+	wheels_on INT,	
+	taxi_in	 INT,
+	scheduled_arrival INT,
+	arrival_time INT,	
+	arrival_delay INT,	
+	diverted INT,	
+	cancelled INT,	
+	cancellation_reason	CHAR(1),
+	air_system_delay INT,	
+	security_delay INT,	
+	airline_delay INT,	
+	late_aircraft_delay INT,	
+	weather_delay INT,
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO

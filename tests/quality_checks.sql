@@ -1,3 +1,15 @@
+/*
+===============================================================================
+Quality Checks
+===============================================================================
+Script Purpose:
+    This script performs basic quality checks for data consistency, duplicates,
+	nulls in primary keys, leading and trailing spaces in strings, etc.
+
+    Run this script after data loading.
+===============================================================================
+*/
+
 -- Check for duplicates and nulls in primary keys
 -- Expectation: No results
 SELECT

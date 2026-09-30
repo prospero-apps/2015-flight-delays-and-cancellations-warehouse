@@ -1,7 +1,7 @@
 # 2015-flight-delays-and-cancellations-warehouse
 *a modern warehouse built with SQL Server with ETL, data modeling and analytics*
 
-This project contains a comprehensive data warehousing solution with elements of analytics. 
+This project contains a comprehensive data warehousing solution. 
 
 # 🏗️ Data Architecture
 The projects follows the Medallion Architecture pattern with the **Bronze**, **Silver**, and **Gold** layers:
@@ -18,7 +18,6 @@ The major elements of the project are:
 -  Data Architecture: data warehouse (Medallion Architecture)
 -  ETL Pipelines: extracting, transforming, and loading data
 -  Data Modeling: fact and dimension tables optimized for analytical queries
--  Analytics & Reporting: SQL-based reports and dashboards for actionable insights
   
 # 🚀 Project Requirements
 
@@ -31,26 +30,25 @@ Develop a modern data warehouse using SQL Server for the 2015 flight delays and 
 -  **Data Sources**: Import data from the source folder containing CSV files.
 -  **Data Quality**: Cleanse the data and improve data quality prior to analysis.
 -  **Integration**: Combine data from source files into a single, user-friendly data model designed for analytical queries.
--  **Scope**: Focus on the 2015 dataset only, no historization required.
+-  **Scope**: Focus on the June 2015 subset only.
 -  **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-
-## BI: Analytics & Reporting (Data Analysis)
-
-**Objective**
-Develop SQL-based analytics.
 
 # 📂 Repository Structure
 ```
 2015-flight-delays-and-cancellations-warehouse/
 │
-├── datasets/                           # Raw datasets used for the project (in CSV format)
+├── datasets/                           # Instructions and Link to the Datasets used for the project (in CSV format)
 │
 ├── docs/                               # Project documentation 
-│   ├── data_architecture.drawio        # Draw.io scheme of the project's architecture
+│   ├── High Level Architecture.drawio  # Draw.io scheme of the project's architecture
+│   ├── Integration Model.drawio        # Draw.io scheme of the integration model
+│   ├── Data Flow.drawio                # Draw.io data flow diagram
+│   ├── Data Model.drawio               # Draw.io file for data models (star schema)
+│   ├── High Level Architecture.png     # PNG image of the project's architecture
+│   ├── Integration Model.png           # PNG image of the integration model
+│   ├── Data Flow.png                   # PNG image of the data flow diagram
+│   ├── Data Model.png                  # PNG image of the data models (star schema)
 │   ├── data_catalog.md                 # Catalog of datasets with field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
 │   ├── bronze/                         # Scripts for extracting and loading raw data
